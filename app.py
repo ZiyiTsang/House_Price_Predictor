@@ -5,7 +5,7 @@ from autogluon.tabular import TabularPredictor
 import pandas as pd
 
 app = Flask(__name__)
-predictor = TabularPredictor.load('ModelSave')
+predictor = TabularPredictor.load('ModelSave',require_py_version_match=False)
 data = pd.read_csv(
     'listing_preProcessing.csv')
 data = data.drop(columns=['price', 'Unnamed: 0'])
