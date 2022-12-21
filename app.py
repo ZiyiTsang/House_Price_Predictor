@@ -5,7 +5,7 @@ from autogluon.tabular import TabularPredictor
 import pandas as pd
 
 app = Flask(__name__)
-predictor = TabularPredictor.load('ModelSave',require_py_version_match=False)
+predictor = TabularPredictor.load('ModelSave/',require_py_version_match=False)
 data = pd.read_csv(
     'listing_preProcessing.csv')
 data = data.drop(columns=['price', 'Unnamed: 0'])
@@ -19,6 +19,7 @@ def intro():
 @app.route("/result", methods=['POST'])
 def result():
     price_ = predict(request.form)
+    price_=str(price_)[0:5]
     # print(request.form)
     # print(predictPrice([8, 3], ['latitude', 'bedrooms']))
     return render_template('result.html', price=price_)
@@ -51,6 +52,10 @@ def predictPrice(value, columnsName, model_='auto'):
     df = pd.DataFrame([value],
                        columns=columnsName)
     df.loc[0:1,'host_since']=1
+    df.loc[0:1, 'availability_30'] = 20
+    df.loc[0:1, 'availability_60'] = 40
+    df.loc[0:1, 'availability_90'] =70
+    df.loc[0:1, 'availability_365'] = 300
     new_data = pd.concat([df, data])
     if model_ == 'auto':
         price = predictor.predict(new_data)
