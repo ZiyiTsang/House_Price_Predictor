@@ -12,14 +12,9 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
 
 
-
-
-
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-
 
 
     <style>
@@ -74,7 +69,6 @@
             -webkit-overflow-scrolling: touch;
         }
     </style>
-
 
 
 </head>
@@ -146,140 +140,118 @@
                         </div>
 
 
-
-
-
-
-
                         <hr class="my-4">
                         <h4 class="mb-3">Advance Settings</h4>
+
+
+                        <div class="col-sm-3">
+                            <label for="lastName" class="form-label">availability in a month</label>
+                            <input type="text" name="availability_30" class="form-control" id="availability_30"
+                                placeholder="" value="10" required>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="lastName" class="form-label">availability in 2 months</label>
+                            <input type="text" name="availability_60" class="form-control" id="availability_60"
+                                placeholder="" value="20" required>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="lastName" class="form-label">availability in 3 months</label>
+                            <input type="text" name="availability_90" class="form-control" id="availability_90"
+                                placeholder="" value="30" required>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="lastName" class="form-label">availability in one year</label>
+                            <input type="text" name="availability_365" class="form-control" id="availability_365"
+                                placeholder="" value="180" required>
+                        </div>
+
+
+                        <div class="col-4">
+                            <label for="lastName" class="form-label">neighborhood</label>
+                            <select name=neighborhood class="form-select" aria-label="Default select example">
+                                <option selected>auto</option>
+                                <option value="neighbourhood_Allston-Brighton">Allston-Brighton</option>
+                                <option value="neighbourhood_Back Bay">Back Bay</option>
+                                <option value="neighbourhood_Beacon Hill">Beacon Hill</option>
+                                <option value="neighbourhood_Brookline">Brookline</option>
+                                <option value="neighbourhood_Cambridge">Cambridge</option>
+                                <option value="neighbourhood_Charlestown">Charlestown/option>
+                                <option value="neighbourhood_Chestnut Hill">Chestnut Hill</option>
+                                <option value="neighbourhood_Chinatown">Chinatown</option>
+                                <option value="neighbourhood_Dorchester">Dorchester</option>
+                                <option value="neighbourhood_Dorchester">Dorchester</option>
+                                <option value="neighbourhood_Downtown">Downtown</option>
+                                <option value="neighbourhood_Downtown Crossing">Downtown Crossing</option>
+                                <option value="neighbourhood_Fenway/Kenmore">Fenway/Kenmore</option>
+                                <option value="neighbourhood_Financial District">Financial District</option>
+                                <option value="neighbourhood_Government Center">Government Center</option>
+                                <option value="neighbourhood_Harvard Square">Harvard Square</option>
+                                <option value="neighbourhood_Hyde Park">Hyde Park</option>
+                                <option value="neighbourhood_Harvard Square">Jamaica Plain</option>
+                                <option value="neighbourhood_Jamaica Plain">nJamaica Plain</option>
+                                <option value="neighbourhood_Leather District">Leather District</option>
+                                <option value="neighbourhood_Mattapan">Mattapan</option>
+                                <option value="neighbourhood_Mission Hill">Mission Hill</option>
+                                <option value="neighbourhood_North End">North End</option>
+                                <option value="neighbourhood_Roslindale">Roslindale</option>
+                                <option value="neighbourhood_Roxbury">Roxbury</option>
+                                <option value="neighbourhood_Somerville">Somerville</option>
+                                <option value="neighbourhood_South Boston">South Boston</option>
+                                <option value="neighbourhood_South End">South Boston</option>
+                                <option value="neighbourhood_Theater District">South Boston</option>
+                                <option value="neighbourhood_Unknown">Unknown</option>
+                                <option value="neighbourhood_West End">West End</option>
+                                <option value="neighbourhood_West Roxbury">West Roxbury</option>
+                            </select>
+                        </div>
+
+                        <div class="col-4">
+                            <label for="lastName" class="form-label">bed_type</label>
+                            <select name=bed_type class="form-select" aria-label="Default select example">
+                                <option selected>auto</option>
+                                <option value="bed_type_Airbed">Airbed</option>
+                                <option value="bed_type_Couch">Couch</option>
+                                <option value="bed_type_Futon">Futon</option>
+                                <option value="bed_type_Pull-out Sofa">Pull-out Sofa</option>
+                                <option value="bed_type_Real Bed">Real Bed</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="lastName" class="form-label">room_type</label>
+                            <select name=room_type class="form-select" aria-label="Default select example">
+                                <option selected>auto</option>
+                                <option value="room_type_Entire home/apt">Entire home/apt</option>
+                                <option value="room_type_Private room">Private room</option>
+                                <option value="room_type_Shared room">Shared room</option>
+
+                            </select>
+                        </div>
+
+
                         <div class="col-12">
                             <label for="lastName" class="form-label">Model Select</label>
                             <select name=model class="form-select" aria-label="Default select example">
                                 <option selected>auto</option>
-
                                 <option value="LightGBM">LightGBM</option>
                                 <option value="CatBoost">CatBoost</option>
-                                <option value="ExtraTreesMSE">ExtraTreesMSE</option>
-                                <option value="RandomForestMSE">RandomForestMSE</option>
+                                <option value="ExtraTreesMSE">ExtraTrees</option>
+                                <option value="RandomForestMSE">RandomForest</option>
                                 <option value="XGBoost">XGBoost</option>
-                                <option value="NeuralNetTorch">NeuralNetTorch</option>
-                                <option value="NeuralNetFastAI">NeuralNetFastAI</option>
-                                <option value="KNeighborsDist">KNeighborsDist</option>
-                                <option value="KNeighborsUnif">KNeighborsUnif</option>
+                                <option value="NeuralNetTorch">NeuralNet(PyTorch)</option>
+                                <option value="NeuralNetFastAI">NeuralNet(FastAI)</option>
+                                <option value="KNeighborsDist">KNeighbors(Weight)</option>
+                                <option value="KNeighborsUnif">KNeighbors(Normal)</option>
                             </select>
                         </div>
-
-
-
-
-
-                        <!-- <div class="col-md-5">
-                            <label for="country" class="form-label">Country</label>
-                            <select class="form-select" id="country" required>
-                                <option value="">Choose...</option>
-                                <option>United States</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select a valid country.
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <label for="state" class="form-label">State</label>
-                            <select class="form-select" id="state" required>
-                                <option value="">Choose...</option>
-                                <option>California</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please provide a valid state.
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <label for="zip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="zip" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Zip code required.
-                            </div>
-                        </div> -->
                     </div>
-
-                    <!-- <hr class="my-4">
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="same-address">
-                        <label class="form-check-label" for="same-address">Shipping address is the same as my
-                            billing address</label>
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="save-info">
-                        <label class="form-check-label" for="save-info">Save this information for next time</label>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <h4 class="mb-3">Payment</h4>
-
-                    <div class="my-3">
-                        <div class="form-check">
-                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
-                                required>
-                            <label class="form-check-label" for="credit">Credit card</label>
-                        </div>
-                        <div class="form-check">
-                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-                            <label class="form-check-label" for="debit">Debit card</label>
-                        </div>
-                        <div class="form-check">
-                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-                            <label class="form-check-label" for="paypal">PayPal</label>
-                        </div>
-                    </div>
-
-                    <div class="row gy-3">
-                        <div class="col-md-6">
-                            <label for="cc-name" class="form-label">Name on card</label>
-                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                            <small class="text-muted">Full name as displayed on card</small>
-                            <div class="invalid-feedback">
-                                Name on card is required
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="cc-number" class="form-label">Credit card number</label>
-                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Credit card number is required
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <label for="cc-expiration" class="form-label">Expiration</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Expiration date required
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <label for="cc-cvv" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Security code required
-                            </div>
-                        </div>
-                    </div>-->
-
 
 
                     <hr class="my-4">
 
                     <button class="w-100 btn btn-primary btn-lg text-center" type="submit" onclick="myFunction()"
                         value="Model computing 模型推导中">Sumit to
-                        predict</button>
+                        predict
+                    </button>
                 </form>
 
             </div>
@@ -300,7 +272,7 @@
         crossorigin="anonymous"></script>
     <script>
         function myFunction() {
-            alert("Please wait！请稍等片刻嗷！");
+            alert("Please wait!请稍等片刻嗷!");
         }
     </script>
 
